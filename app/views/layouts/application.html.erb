@@ -8,8 +8,14 @@
 </head>
 <body>
 
-	<h1>Ruby on Nails</h1>
-
+<h1>Ruby on Nails</h1>
+<% if current_user %>
+  <p>Welcome back, <%= current_user.name%>!</p>
+  <p><%= link_to 'Logout', sessions_path, method: :delete %></p>
+<% else %>
+  <p><%= link_to 'Sign Up', new_user_path %></p>
+  <p><%= link_to 'Login', sessions_new_path %></p>
+<% end %>
 <%= yield %>
 
 </body>
