@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ruby on Nails</title>
+  <title>Ruby on Nails &#x1f485;</title>
+  <%= favicon_link_tag(source='favicon.ico') %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -11,7 +12,7 @@
 <h1>Ruby on Nails</h1>
 <% if current_user %>
   <p>Welcome back, <%= current_user.name%>!</p>
-  <p><%= link_to 'Logout', sessions_path, method: :delete %></p>
+  <p><%= link_to 'Logout', logout_path, method: :delete %></p>
 <% else %>
   <p><%= link_to 'Sign Up', new_user_path %></p>
   <p><%= link_to 'Login', sessions_new_path %></p>
