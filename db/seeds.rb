@@ -3,7 +3,10 @@
 Color.destroy_all
 
 # Data Scraped from Essie's Website
-response = HTTParty.get('https://www.kimonolabs.com/api/dpq9elac?apikey=nSRHFLygw6rJNhaX3W2LKsLCwPPOudme')
+ESSIE_API_KEY = ENV["ESSIE_API_KEY"]
+url = "https://www.kimonolabs.com/api/dpq9elac?apikey=#{ESSIE_API_KEY}"
+
+response = HTTParty.get(url)
 i = 0
 
 while i < response["results"]["collection"].length do
