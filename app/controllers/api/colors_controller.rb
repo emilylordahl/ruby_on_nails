@@ -1,4 +1,4 @@
-class ColorsController < ApplicationController
+class Api::ColorsController < ApplicationController
   before_action :authenticate
   before_action :set_color, only: [:show, :edit, :update, :destroy]
 
@@ -20,6 +20,7 @@ class ColorsController < ApplicationController
 
   # GET /colors/1/edit
   def edit
+    @color = Color.find(params[:id])
   end
 
   # POST /colors

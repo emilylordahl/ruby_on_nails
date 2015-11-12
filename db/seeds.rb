@@ -1,5 +1,3 @@
-# Seed Color API
-
 Color.destroy_all
 
 # Data Scraped from Essie's Website

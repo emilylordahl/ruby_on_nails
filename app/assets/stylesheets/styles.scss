@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+}
+
+body {
+  background: -webkit-linear-gradient(-90deg, #B24592 10%, #F15F79 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(-90deg, #B24592 10%, #F15F79 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(-90deg, #B24592 10%, #F15F79 90%); /* IE10 */
+  background:      -o-linear-gradient(-90deg, #B24592 10%, #F15F79 90%); /* Opera 11.10+ */
+  background:         linear-gradient(-90deg, #B24592 10%, #F15F79 90%); /* W3C */
+  font-family: Omnes;
+  color: snow;
+  line-height: 1.8;
+  font-size: 16px;
+  color: set-background-color(snow);
+}
+
+// @function set-background-color($color) {
+//   @if (lightness($color) > 50) {
+//     @return $twitterblue; // Lighter background, return dark color
+//   } @else {
+//     @return $background-color; // Darker background, return light color
+//   }
+// }
+
+p, ol, ul, td {
+  font-family: Omnes;
+  font-size: 1.125em;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: snow;
+  text-decoration: none;
+  &:visited {
+    color: snow;
+  }
+  &:hover {
+    color: yellow;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: pink;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: palevioletred;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid palevioletred;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #pink;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}

@@ -15,7 +15,7 @@
       <tr>
         <td><%= color.name %></td>
         <td><%= link_to 'Show', color %></td>
-        <td><%= link_to 'Edit', edit_color_path(color) %></td>
+        <td><%= link_to 'Edit', edit_api_color_path(color) %></td>
         <td><%= link_to 'Destroy', color, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Color', new_color_path %>
+<%= link_to 'New Color', new_api_color_path %>

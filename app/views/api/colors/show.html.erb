@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p class="<%= @color.category%>" style="color: <%= @color.hex_value%>">
+  <strong>Name:</strong>
+  <%= @color.name %>
+  <strong>Category:</strong>
+  <%= @color.category%>
+</p>
+
+<%= link_to 'Edit', edit_api_color_path(@color) %> |
+<%= link_to 'Back', api_colors_path %>
