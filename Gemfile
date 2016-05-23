@@ -33,6 +33,7 @@ gem 'email_validator'
 
 gem 'httparty'
 
+gem 'font-awesome-sass'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

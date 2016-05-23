@@ -4,20 +4,57 @@
   <title>Ruby on Nails &#x1f485;</title>
   <%= favicon_link_tag %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<h1>Ruby on Nails</h1>
-<% if current_user %>
-  <p>Welcome back, <%= current_user.name%>!</p>
-  <p><%= link_to 'Logout', logout_path, method: :delete %></p>
-<% else %>
-  <p><%= link_to 'Sign Up', new_user_path %></p>
-  <p><%= link_to 'Login', sessions_new_path %></p>
-<% end %>
-<%= yield %>
 
+<nav class="grey-text white z-depth-0">
+  <div class="nav-wrapper">
+    <%= link_to "Ruby on Nails", api_colors_path, :class => 'brand-logo' %>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <% if current_user %>
+        <li><%= current_user.name%></li>
+        <li><%= link_to "Logout", logout_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to 'Sign Up', new_user_path %></li>
+        <li><%= link_to 'Login', sessions_new_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container">
+  <%= yield %>
+</div>
+<footer class="page-footer red lighten-5">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="grey-text">About Ruby on Nails</h5>
+        <p class="grey-text text-lighten-1">This app was built by a lady dev named Emily so she could have a side project based entirely on a pun, learn Material Design, and help herself with the regular dilemma of picking a nail polish color.</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="grey-text">More from Emily</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-1" href="#!"><%= icon('desktop') %>Website</a></li>
+          <li><a class="grey-text text-lighten-1" href="#!"><%= icon('github') %>GitHub</a></li>
+          <li><a class="grey-text text-lighten-1" href="#!"><%= icon('instagram') %>Instagram</a></li>
+          <li><a class="grey-text text-lighten-1" href="#!"><%= icon('twitter') %>Twitter</a></li>
+          <li><a class="grey-text text-lighten-1" href="#!"><%= icon('behance') %>Behance</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright grey-text text-darken-1">
+    <div class="container center-align">
+    Made with <%= icon('heart-o') %> in Brooklyn
+    </div>
+  </div>
+</footer>
 </body>
 </html>

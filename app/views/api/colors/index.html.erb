@@ -1,25 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Colors</h1>
+<h1>The Collection</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @colors.each do |color| %>
-      <tr>
-        <td style="color: <%= color.hex_value%>"><%= color.name %></td>
-        <td><%= link_to 'Show', api_color_path(color) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<div class="row">
+  <div class="col s12">
+    <ul class="tabs">
+      <li class="tab col s1 active">Sheers</li>
+      <li class="tab col s1 disabled">Pinks</li>
+      <li class="tab col s1">Reds</li>
+      <li class="tab col s1">Plums</li>
+      <li class="tab col s1">Corals</li>
+      <li class="tab col s1">Neutrals</li>
+      <li class="tab col s1">Grays</li>
+      <li class="tab col s1">Greens</li>
+      <li class="tab col s1">Blues</li>
+      <li class="tab col s1">Deeps</li>
+      <li class="tab col s1">Metallics</li>
+      <li class="tab col s1">All</li>
+    </ul>
+  </div>
+</div>
 
 <%#= link_to 'New Color', new_api_color_path %>
+
+  <div class="row">
+  <% @colors.each do |polish_color| %>
+    <div class="col s4 center-align <%= polish_color.category%>">
+      <div class="card z-depth-0" style="background-color: <%= polish_color.hex_value%>;">
+      <div class="card-content">
+        <span class="card-title color-name truncate"><%= polish_color.name %></span>
+      </div>
+      <div class="card-action right-align">
+        <div class="left chip"> <%= polish_color.category%> </div>
+        <a class="btn-floating waves-effect waves-light white"><%= icon('plus', class: 'grey-text text-lighten-2') %></i></a>
+        <a class="btn-floating waves-effect waves-light white"><%= icon('heart', class: 'grey-text text-lighten-2') %></i></a>
+        <!-- <%= link_to 'Show', api_color_path(polish_color) %> -->
+      </div>
+      </div>
+    </div>
+  <% end %>
+  </div>

@@ -1,3 +1,6 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,25 +11,17 @@
 }
 
 body {
-  background: -webkit-linear-gradient(-90deg, #B24592 10%, #F15F79 90%); /* Chrome 10+, Saf5.1+ */
-  background:    -moz-linear-gradient(-90deg, #B24592 10%, #F15F79 90%); /* FF3.6+ */
-  background:     -ms-linear-gradient(-90deg, #B24592 10%, #F15F79 90%); /* IE10 */
-  background:      -o-linear-gradient(-90deg, #B24592 10%, #F15F79 90%); /* Opera 11.10+ */
-  background:         linear-gradient(-90deg, #B24592 10%, #F15F79 90%); /* W3C */
+  // background: -webkit-linear-gradient(-90deg, #B24592 10%, #F15F79 90%); /* Chrome 10+, Saf5.1+ */
+  // background:    -moz-linear-gradient(-90deg, #B24592 10%, #F15F79 90%); /* FF3.6+ */
+  // background:     -ms-linear-gradient(-90deg, #B24592 10%, #F15F79 90%); /* IE10 */
+  // background:      -o-linear-gradient(-90deg, #B24592 10%, #F15F79 90%); /* Opera 11.10+ */
+  // background:         linear-gradient(-90deg, #B24592 10%, #F15F79 90%); /* W3C */
   font-family: Omnes;
-  color: snow;
+  background-color: snow;
+  color: lightgray;
   line-height: 1.8;
   font-size: 16px;
-  color: set-background-color(snow);
 }
-
-// @function set-background-color($color) {
-//   @if (lightness($color) > 50) {
-//     @return $twitterblue; // Lighter background, return dark color
-//   } @else {
-//     @return $background-color; // Darker background, return light color
-//   }
-// }
 
 p, ol, ul, td {
   font-family: Omnes;
@@ -86,5 +81,49 @@ div {
   ul li {
     font-size: 12px;
     list-style: square;
+  }
+}
+
+span.color-name {
+  font-family: Omnes;
+  font-size: 2em!important;
+  padding: 1em .25em;
+  line-height: 1em;
+}
+
+li {
+  .fa {
+    margin-right: 10px;
+  }
+}
+
+.tabs .tab {
+  font-size: 14px;
+  font-weight: 100;
+  border-right: 1px solid #f2f3f3;
+}
+
+.tabs .tab:nth-last-child(1) {
+    border-right: none;
+}
+
+.chip {
+  background-color: white!important;
+  opacity: .5;
+  line-height: 34px!important;
+}
+.card-action a:nth-of-type(2) {
+  margin-left: 7.5px;
+}
+
+.card-action {
+  .fa {
+    font-size: 1.25em;
+  }
+}
+
+nav {
+  .brand-logo {
+    padding: 0 .5em!important;
   }
 }
